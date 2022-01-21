@@ -1,0 +1,15 @@
+.navbar__container{
+    display: flex;
+    align-items: center;
+    padding: 1rem 10rem;
+    justify-content: space-between;
+    background-color: var(--secondary_color);
+    width: 100vw;
+}
+.navbar__title{
+    color: var(--primary_color);
+    font-size: 40px;
+    font-weight: bold;
+    user-select: none;
+    cursor: pointer;
+}

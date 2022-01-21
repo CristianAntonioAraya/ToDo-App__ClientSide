@@ -1,0 +1,26 @@
+
+::root{
+    --primary_color: #1A374D;
+    --secondary_color: #FFFFFF;
+    --blue_color: #0275D8;
+    --yellow_color: #F0AD4E;
+    --green_color: #5CB85C;
+    --red_color: #D9534F;
+}
+
+body.light__theme{ 
+    --primary_color: #1A374D;
+    --secondary_color: #FFFFFF;
+    --blue_color: #0275D8;
+    --yellow_color: #F0AD4E;
+    --green_color: #5CB85C;
+    --red_color: #D9534F;
+}
+body.dark__theme{
+    --primary_color: #FFFFFF;
+    --secondary_color: #1A374D;
+    --blue_color: #0275D8;
+    --yellow_color: #F0AD4E;
+    --green_color: #5CB85C;
+    --red_color: #D9534F;
+}
