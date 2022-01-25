@@ -21,7 +21,6 @@ const SwitchButton = () => {
       setTheme('light')
     }
   }
-  console.log(theme);
 
   return (
     <button className='switch__button' onClick={handleSwitchTheme}>Switch theme</button>
