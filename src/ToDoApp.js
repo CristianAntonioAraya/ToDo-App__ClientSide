@@ -1,11 +1,12 @@
-import React from 'react';
-import { Navbar } from './components/Navbar';
+import { BrowserRouter } from 'react-router-dom';
+
+import AppRoutes from './routes/AppRoutes';
 
 const ToDoApp = () => {
   return (
-  <div>
-      <Navbar/>
-  </div>
+    <BrowserRouter>
+        <AppRoutes/>
+    </BrowserRouter>
   );
 };
 

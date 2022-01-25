@@ -5,3 +5,14 @@
 
 @import './components/navbar';
 @import './components/buttons';
+@import './components/note-bar';
+
+//pages
+
+@import './components/pages/home';
+@import './components/pages/auths';
+
+//task
+
+@import './components/task/single-task';
+@import './components/task/tasks';
