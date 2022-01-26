@@ -1,12 +1,12 @@
 
 import { Provider } from 'react-redux';
 import { store } from './redux/store/Store';
-import AppRoutes from './routes/AppRoutes';
+import DashBoardRoutes from './routes/DashboardRoutes';
 
 const ToDoApp = () => {
   return (
     <Provider store={store}>
-        <AppRoutes/>
+        <DashBoardRoutes/>
     </Provider>
   );
 };

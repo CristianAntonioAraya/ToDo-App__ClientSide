@@ -1,17 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SwitchButton from '../components/SwitchButton';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { StartLoginEmailPassword } from '../redux/actions/AuthActions';
 
 const SignInPage = () => {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const { token } = useSelector( state => state.auth)
 
-    const [email, setEmail] = useState('ArayaCristian1398@gmail.com');
-    const [password, setPassword] = useState('123456');       
+    useEffect(() => {
+        if(token !== null){
+            // navigate('/')
+        }
+    }, [token]);
     
 
-    const handleLogin = () => {
-        console.log('click');
+
+    const [email, setEmail] = useState('arayacristian1398@gmail.com');
+    const [password, setPassword] = useState('123456');       
+    
+    
+    const handleLogin = (e) => {
+        e.preventDefault();
+        dispatch(StartLoginEmailPassword(email, password))
     }
 
     return (
@@ -24,17 +37,17 @@ const SignInPage = () => {
                     <h3 className='auth__title'>Login</h3>
                     <form onSubmit={ handleLogin }>
                         <div className='auth__field'>
-                            <input className='auth__input' placeholder='Email'/>
+                            <input className='auth__input' placeholder='Email' value={email} onChange={ (e)=> setEmail(e.target.value) }/>
                             <label className='auth__label'>Email:</label>
                         </div>
                         <div className='auth__field'>
-                            <input className='auth__input' placeholder='Password'/>
+                            <input className='auth__input' placeholder='Password' value={password} onChange={ (e) => setPassword(e.target.value)} />
                             <label className='auth__label'>Password:</label>
                         </div>
                         <button className='submit__button' type='submit'>Login</button>
                         <footer className='auth__footer'>
                             <p className='auth__text'>Don't have account?</p>
-                            <p className='auth__goto' onClick={ () => { navigate('/SignUp') } } >Signup Now</p>
+                            <p className='auth__goto' onClick={ () => { navigate('/auth/SignUp') } } >Signup Now</p>
                         </footer>
                     </form>
                 </div>

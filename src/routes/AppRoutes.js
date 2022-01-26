@@ -1,19 +1,18 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { Route, Routes } from "react-router-dom"
+import Navbar from "../components/Navbar"
 import HomePage from "../pages/HomePage"
-import SignInPage from "../pages/SignInPage"
 import SettingPage from "../pages/SettingPage"
-import SignUpPage from "../pages/SignUpPage"
+
 
 const AppRoutes = () => {
-    return ( 
-        <BrowserRouter>
+    return (
+        <>
+            <Navbar/>
             <Routes>
                 <Route path="/" element={ <HomePage/> }/>
-                <Route path="/settings" element={ <SettingPage/> }/>
-                <Route path="/SignIn" element={<SignInPage/> }/>
-                <Route path="/SignUp" element={<SignUpPage/> }/>
+                <Route path="/Setting" element={ <SettingPage/> }/>
             </Routes>      
-        </BrowserRouter>    
+        </>
     )
 }
 

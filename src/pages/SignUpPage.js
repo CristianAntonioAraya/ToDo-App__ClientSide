@@ -1,19 +1,31 @@
 import SwitchButton from '../components/SwitchButton';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { StartRegister } from '../redux/actions/AuthActions';
+import { useDispatch, useSelector } from 'react-redux';
 
 const SignUpPage = () => {
 
     const navigate = useNavigate()
+    const dispatch = useDispatch()
     
-    const [name, setName] = useState('Cristian Araya');
+    const [userName, setUserName] = useState('Cristian Araya');
     const [email, setEmail] = useState('arayacristian1398@gmail.com');
     const [password, setPassword] = useState('123456');
     const [repeatPassword, setRepeatPassword] = useState('123456');
 
+    const { token } = useSelector( state => state.auth)
+
+    useEffect(() => {
+        if(token !== null){
+            navigate('/')
+        }
+    }, [token]);
+    
+
     const handleRegister = (e) => {
         e.preventDefault()
-        
+        dispatch(StartRegister(userName, email, password))
     }
 
     return (
@@ -26,7 +38,7 @@ const SignUpPage = () => {
                     <h3 className='auth__title'>Register</h3>
                     <form onClick={ handleRegister }>
                         <div className='auth__field'>
-                            <input className='auth__input' placeholder='Name' value={name} onChange={ (e) => setName(e.target.value)}/>
+                            <input className='auth__input' placeholder='Name' value={userName} onChange={ (e) => setUserName(e.target.value)}/>
                             <label className='auth__label'>Name:</label>
                         </div>
                         <div className='auth__field'>
@@ -44,7 +56,7 @@ const SignUpPage = () => {
                         <button className='submit__button' type='submit' >Register</button>
                         <footer className='auth__footer'>
                             <p className='auth__text'>Already have an account?</p>
-                            <p className='auth__goto' onClick={ () => { navigate('/SignIn') } } >SignIn Now</p>
+                            <p className='auth__goto' onClick={ () => { navigate('/auth/SignIn') } } >SignIn Now</p>
                         </footer>
                     </form>
                 </div>
