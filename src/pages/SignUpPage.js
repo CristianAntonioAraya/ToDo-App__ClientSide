@@ -1,8 +1,8 @@
 import SwitchButton from '../components/SwitchButton';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { StartRegister } from '../redux/actions/AuthActions';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch  } from 'react-redux';
 
 const SignUpPage = () => {
 
@@ -14,14 +14,6 @@ const SignUpPage = () => {
     const [password, setPassword] = useState('123456');
     const [repeatPassword, setRepeatPassword] = useState('123456');
 
-    const { token } = useSelector( state => state.auth)
-
-    useEffect(() => {
-        if(token !== null){
-            navigate('/')
-        }
-    }, [token]);
-    
 
     const handleRegister = (e) => {
         e.preventDefault()

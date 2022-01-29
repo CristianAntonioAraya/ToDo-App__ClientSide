@@ -3,11 +3,9 @@ import { Navigate } from "react-router-dom";
 
 const PublicRoutes = ({ children }) => {
 
-    const {token} = useSelector( state => state.auth)
+    const { isAuth } = useSelector( state => state.auth)
 
-    console.log('Es ruta publica');
-
-    return token 
+    return isAuth 
         ? <Navigate to="/"/>  
         : children
         

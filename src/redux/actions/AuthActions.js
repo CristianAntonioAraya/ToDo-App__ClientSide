@@ -4,15 +4,16 @@ import { types } from "../types/Types"
 const URL = 'http://localhost:4000/users/'
 
 export const StartLoginEmailPassword = ( email, password ) => {
-    return (dispatch) => {
+    return (dispatch ) => {
+
 
         const data = { email, password }
 
         axios.post(URL+'signin',data)
             .then( ({data}) => {
                 const {userName, id, token} = data;
-                console.log(data);
-                dispatch(Login(id, userName, token)) 
+                dispatch(Login(id, userName))
+                localStorage.setItem('token',token) 
             })
             .catch( error => {
                 console.log(error);
@@ -29,10 +30,8 @@ export const StartRegister = ( userName, email, password ) => {
             .then( ({data}) => {
                 if(data.ok){
                     const {userName, id, token} = data;
-                    dispatch(Login(id, userName, token)) 
-                }
-                else{
-                    
+                    dispatch(Login(id, userName))
+                    localStorage.setItem('token',token) 
                 }
             })
             .catch( error => {
@@ -41,7 +40,27 @@ export const StartRegister = ( userName, email, password ) => {
     }
 }
 
-export const Login = (id, userName, token) => ({
+export const renewToken = () => { 
+    return ( dispatch ) => {
+
+        const token = localStorage.getItem('token')
+
+        axios.get(URL+'renew', { headers: { 'x-token':token }})
+            .then( ({data}) => {
+                const { id, userName } = data;
+                dispatch(Login( id, userName))
+            })
+            .catch( error => { 
+                console.log(error);
+            })
+    }
+}
+
+export const Login = (id, userName) => ({
     type: types.login,
-    payload: { id, userName, token }
+    payload: { id, userName }
+})
+
+export const Logout = () => ({
+    type: types.Logout
 })

@@ -8,15 +8,6 @@ const SignInPage = () => {
 
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const { token } = useSelector( state => state.auth)
-
-    useEffect(() => {
-        if(token !== null){
-            // navigate('/')
-        }
-    }, [token]);
-    
-
 
     const [email, setEmail] = useState('arayacristian1398@gmail.com');
     const [password, setPassword] = useState('123456');       
@@ -25,6 +16,7 @@ const SignInPage = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         dispatch(StartLoginEmailPassword(email, password))
+        navigate('/')
     }
 
     return (

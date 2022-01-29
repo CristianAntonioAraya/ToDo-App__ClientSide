@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import { useState} from 'react';
 import { isDark, isLight, LocalTheme } from '../utils/LocalTheme';
 
 const SwitchButton = () => {
@@ -6,10 +6,6 @@ const SwitchButton = () => {
   const [theme, setTheme] = useState('light');
 
     LocalTheme();
-    
-    useEffect(() => {
-      setTheme(localStorage.getItem('theme'));
-    }, []);
 
   const handleSwitchTheme = () => {
     if(theme === 'light'){
