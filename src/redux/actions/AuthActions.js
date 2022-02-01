@@ -41,18 +41,19 @@ export const StartRegister = ( userName, email, password ) => {
 }
 
 export const renewToken = () => { 
-    return ( dispatch ) => {
+    return async ( dispatch ) => {
 
         const token = localStorage.getItem('token')
 
-        axios.get(URL+'renew', { headers: { 'x-token':token }})
-            .then( ({data}) => {
+        const {data} = await axios.get(URL+'renew', { headers: { 'x-token':token }})
+
+        if(data.ok){
                 const { id, userName } = data;
                 dispatch(Login( id, userName))
-            })
-            .catch( error => { 
-                console.log(error);
-            })
+        }
+        else{
+            localStorage.removeItem('token')
+        }
     }
 }
 

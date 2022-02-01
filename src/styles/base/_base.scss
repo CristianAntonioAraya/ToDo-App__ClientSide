@@ -7,9 +7,12 @@ body,html{
     
 }
 *{
+    font-family: 'Dongle', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: var(--secondary_color);
     transition: color 0.8s ease, background 0.8s ease;
 }
+
+

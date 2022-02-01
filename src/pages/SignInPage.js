@@ -1,8 +1,12 @@
-import { useEffect, useState } from 'react';
-import SwitchButton from '../components/SwitchButton';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
+
+
 import { StartLoginEmailPassword } from '../redux/actions/AuthActions';
+import SwitchButton from '../components/SwitchButton';
 
 const SignInPage = () => {
 
@@ -21,28 +25,31 @@ const SignInPage = () => {
 
     return (
         <>
-            <div className='auth__theme'>
-                <SwitchButton/>
-            </div>
-            <div className="auth__container">
-                <div className="auth__content">
-                    <h3 className='auth__title'>Login</h3>
-                    <form onSubmit={ handleLogin }>
-                        <div className='auth__field'>
-                            <input className='auth__input' placeholder='Email' value={email} onChange={ (e)=> setEmail(e.target.value) }/>
-                            <label className='auth__label'>Email:</label>
+        <SwitchButton/>
+            <div className='auth__container'>
+                <h3 className='auth__title'>Login</h3>
+                <form className='auth__form' onSubmit={ handleLogin }>
+
+                    <div className='auth__field'>
+                        <div className='auth__icon'>
+                            <FontAwesomeIcon icon={faEnvelope}/>
                         </div>
-                        <div className='auth__field'>
-                            <input className='auth__input' placeholder='Password' value={password} onChange={ (e) => setPassword(e.target.value)} />
-                            <label className='auth__label'>Password:</label>
+                        <input className='auth__input' placeholder='Email' value={email} onChange={ (e)=> setEmail(e.target.value) }/>
+                    </div>
+
+                    <div className='auth__field'>
+                        <div className='auth__icon'>
+                            <FontAwesomeIcon icon={faKey}/>
                         </div>
-                        <button className='submit__button' type='submit'>Login</button>
-                        <footer className='auth__footer'>
-                            <p className='auth__text'>Don't have account?</p>
-                            <p className='auth__goto' onClick={ () => { navigate('/auth/SignUp') } } >Signup Now</p>
-                        </footer>
-                    </form>
-                </div>
+                        <input className='auth__input' placeholder='Password' value={password} onChange={ (e) => setPassword(e.target.value)} />
+                    </div>
+
+                    <button className='button__submit' type='submit'>Login</button>
+                    <footer className='auth__footer'>
+                        <p className='auth__text'>Don't have account?</p>
+                        <p className='auth__redirect' onClick={ () => { navigate('/auth/SignUp') } } >Signup Now</p>
+                    </footer>
+                </form>
             </div>
         </>
 )};

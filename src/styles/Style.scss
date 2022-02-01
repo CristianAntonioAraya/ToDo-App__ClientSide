@@ -1,18 +1,12 @@
+//base
 
 @import './base/settings';
 @import './base/base';
 
-
-@import './components/navbar';
-@import './components/buttons';
-@import './components/note-bar';
-
 //pages
+@import './pages/auth';
 
-@import './components/pages/home';
-@import './components/pages/auths';
+//components
 
-//task
-
-@import './components/task/single-task';
-@import './components/task/tasks';
+@import './components/buttons';
+@import './components/switch-theme';

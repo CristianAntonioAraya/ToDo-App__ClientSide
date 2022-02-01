@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
 
 ::root{
     --primary_color: #1A374D;
+    --primary-accent_color: #173044;
+
     --secondary_color: #FFFFFF;
+    --secondary-accent_color: #EBF0F3;
+
+    --light_color:#EBF0F3;
+    --dark_color:#173044;
+
     --blue_color: #0275D8;
     --yellow_color: #F0AD4E;
     --green_color: #5CB85C;
@@ -9,8 +17,16 @@
 }
 
 body.light__theme{ 
+
     --primary_color: #1A374D;
+    --primary-accent_color: #173044;
+
     --secondary_color: #FFFFFF;
+    --secondary-accent_color: #EBF0F3;
+
+    --light_color:#EBF0F3;
+    --dark_color:#173044;
+
     --blue_color: #0275D8;
     --yellow_color: #F0AD4E;
     --green_color: #5CB85C;
@@ -18,7 +34,14 @@ body.light__theme{
 }
 body.dark__theme{
     --primary_color: #FFFFFF;
+    --primary-accent_color: #EBF0F3;
+
     --secondary_color: #1A374D;
+    --secondary-accent_color: #173044 ;
+
+    --light_color:#EBF0F3;
+    --dark_color:#173044;
+
     --blue_color: #0275D8;
     --yellow_color: #F0AD4E;
     --green_color: #5CB85C;
