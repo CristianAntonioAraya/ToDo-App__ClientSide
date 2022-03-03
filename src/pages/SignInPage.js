@@ -41,7 +41,7 @@ const SignInPage = () => {
                         <div className='auth__icon'>
                             <FontAwesomeIcon icon={faKey}/>
                         </div>
-                        <input className='auth__input' placeholder='Password' value={password} onChange={ (e) => setPassword(e.target.value)} />
+                        <input className='auth__input' type='password' placeholder='Password' value={password} onChange={ (e) => setPassword(e.target.value)} />
                     </div>
 
                     <button className='button__submit' type='submit'>Login</button>

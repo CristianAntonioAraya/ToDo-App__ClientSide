@@ -20,7 +20,7 @@ export const getAllTask = () => {
 }
 
 export const addNewTask = ( title, description ) => { 
-    return async( ) => {
+    return async ( ) => {
 
         const body = { title, description }
         const token = localStorage.getItem('token')
@@ -31,6 +31,19 @@ export const addNewTask = ( title, description ) => {
             console.log(error);
         }
     } 
+}
+
+export const deleteTask = ( id ) => {
+    return async () => {
+        try {
+            const token = localStorage.getItem('token')
+            const res = await axios.delete(URL+'/delete/'+id,{ headers: { 'x-token': token }})
+            console.log(res)
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 
 

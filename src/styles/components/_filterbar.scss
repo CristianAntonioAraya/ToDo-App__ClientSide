@@ -1,0 +1,40 @@
+.filter__container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1rem;
+}
+.filter__btn-content{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+.filter__btn-text{
+    margin-right: 10px;
+}
+.filter__link-content{
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+    .filter__btn-icon{
+        font-size: 15px;
+    }
+    .filter__btn-text{
+        font-size: 25px;
+    }
+    .filter__icon-filters{
+        padding-right: 4px;
+    }
+    .filter__link-content{
+        padding: 0.3rem;
+    }
+    .filter__link-text{
+        font-size: 20px;
+        margin-right: 0.3rem;
+    }
+    .filter__link-icon{
+        font-size: 20px;
+    }
+}

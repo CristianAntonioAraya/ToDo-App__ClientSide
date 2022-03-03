@@ -5,8 +5,15 @@
 
 //pages
 @import './pages/auth';
+@import './pages/home';
+@import './pages/addnew';
 
 //components
 
 @import './components/buttons';
 @import './components/switch-theme';
+@import './components/nav-mobile';
+@import './components/nav';
+@import './components/filterbar';
+@import './components/tasks';
+@import './components/single-task';

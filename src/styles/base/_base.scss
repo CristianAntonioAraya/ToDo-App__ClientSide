@@ -2,9 +2,8 @@
 
 body,html{
     width: 100vw;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: var(--primary_color);
-    
 }
 *{
     font-family: 'Dongle', sans-serif;
@@ -14,5 +13,20 @@ body,html{
     color: var(--secondary_color);
     transition: color 0.8s ease, background 0.8s ease;
 }
+.route__container{
+    height: 100vh;
+    padding-top: 0rem;
+    margin-bottom: 0rem;
+}
 
-
+.shadow::before{
+    overflow: hidden;
+    position: absolute;
+    transition: all .5s ease;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.5);
+}

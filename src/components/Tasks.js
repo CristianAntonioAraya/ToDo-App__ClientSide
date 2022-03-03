@@ -26,7 +26,7 @@ const Tasks = () => {
             <div className="tasks__container">
                 {
                     tasks.map( task => (        
-                        <SingleTask key={task._id} title={task.title} description={task.description} state={task.state}/>               
+                        <SingleTask key={task._id} title={task.title} description={task.description} state={task.state} id={task._id}/>               
                     ))
                 }
             </div>

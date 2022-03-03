@@ -14,9 +14,11 @@ const AddNew = () => {
 
 
     const handleClear = () => {
-        setTitle('')
-        setDescription('')
+        console.log('clean')
+        setTitle(' ')
+        setDescription(' ')
     }
+
     const isValid = () => { 
         if(title === ''){
             console.log('title invalid');
@@ -41,24 +43,28 @@ const AddNew = () => {
         <>
             <Navbar/>
             <div className='addnew__container'>
-                <div className='addnew__content'>
-                    <form className='addnew__form' onSubmit={ handleAdd }>
-                        <h3 className='addnew__title'>Add New Task</h3>
-                        <div className='line'/>
-                        <div className='addnew__field'>
-                            <label className='addnew__label'>Title:</label>
-                            <input className='addnew__input' value={title} onChange={ e => setTitle(e.target.value)} />
-                        </div>
-                        <div className='addnew__field'>
-                            <label className='addnew__label' >Description:</label>
-                            <textarea className='addnew__textarea' value={description} onChange={ e => setDescription(e.target.value)}></textarea>
-                        </div>
-                        <div className='addnew__buttons'>
-                            <button className='add__button' type='submit'>Add</button>
-                            <button className='delete__button' onClick={ handleClear }>Clear</button>
-                        </div>
-                    </form>
-                </div>
+                <h3 className='addnew__title'>Add New Task
+                    <div className='addnew__line'/>
+                </h3>
+                <form onSubmit={ handleAdd }>
+                    <div className='addnew__field'>
+                        <label className='addnew__label'>Title:</label>
+                        <input className='addnew__input' value={title} onChange={ e => setTitle(e.target.value)} />
+                    </div>
+                    <div className='addnew__field'>
+                        <label className='addnew__label' >Description:</label>
+                        <textarea 
+                        rows="6"
+                        className='addnew__textarea' 
+                        value={description} 
+                        onChange={ e => setDescription(e.target.value)}>
+                        </textarea>
+                    </div>
+                    <div className='addnew__buttons'>
+                        <button className='button__send' type='submit'>Add</button>
+                        <button className='button__clear' type='reset' onClick={ handleClear }>Clean</button>
+                    </div>
+                </form>
             </div>
         </>
     )};

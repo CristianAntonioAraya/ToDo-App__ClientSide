@@ -1,0 +1,40 @@
+.addnew__container{
+    width: 100vw;
+    max-height: 100%;
+    flex-direction: column;
+    display: flex;
+    padding: 0 1rem;
+}
+.addnew__title{
+    font-size: 45px;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+.addnew__line{
+    background-color: var(--secondary_color);
+    height: 2px;
+    width: 100%;
+}
+.addnew__field{
+    display: flex;
+    flex-direction: column;
+}
+.addnew__label{
+    font-size: 40px;
+}
+.addnew__input{
+    font-size: 30px;
+    padding: 0 0.5rem;
+    border: 1px solid var(--secondary_color);
+}
+.addnew__textarea{
+    font-size: 30px;
+    padding: 0 0.5rem;
+    resize: none;
+    
+}
+.addnew__buttons{
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+}

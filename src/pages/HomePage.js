@@ -1,7 +1,8 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import NoteBar from '../components/NoteBar';
+import FilterBar from '../components/FilterBar';
 import Tasks from '../components/Tasks';
+import Navbar from "../components/Navbar"
+
 
 
 const HomePage = () => {
@@ -9,8 +10,10 @@ const HomePage = () => {
     return (
         <div className='home__container'>
             <Navbar/>
-            <NoteBar/>
-            <Tasks/>
+            <FilterBar/>
+            <div className='home__tasks'>
+                <Tasks/>
+            </div>
         </div>
     )
 };

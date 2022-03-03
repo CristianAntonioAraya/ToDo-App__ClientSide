@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar';
 const SettingPage = () => {
     return (
         <div>
-            <Navbar/>
             <p>Setting Page</p>
         </div>
 )};
