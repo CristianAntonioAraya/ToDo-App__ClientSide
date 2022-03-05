@@ -10,6 +10,7 @@
     left: 0;
 }
 .nav-mobile__icon-open{
+    color: var(--secondary_color);
     position: relative;
     z-index: 1;
     cursor: pointer;
@@ -19,6 +20,7 @@
     }
 }
 .nav-mobile__icon-close{
+    color: var(--secondary_color);
     position: absolute;
     font-size: 40px;
     top: 1rem;
@@ -43,6 +45,7 @@
     left: -100vw !important;
 }
 .nav-mobile__links{
+    color: var(--secondary_color);
     width: 100%;
     height: 100%;
     display: flex;
@@ -52,12 +55,13 @@
 }
 .nav-mobile__link{
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     padding: 1rem 0;
     width: 100%;
     border-bottom: 1px solid var(--secondary_color);
 }
 .nav-mobile__title{
+    color: var(--secondary_color);
     font-size: 50px;
 }
 @media only screen and (min-width: 768px) {

@@ -26,7 +26,6 @@ export const addNewTask = ( title, description ) => {
         const token = localStorage.getItem('token')
         try {
             const { data} =await axios.post(URL+'/new', body, { headers: { 'x-token': token }})
-            console.log(data);
         } catch (error) {
             console.log(error);
         }

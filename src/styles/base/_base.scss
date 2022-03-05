@@ -10,7 +10,6 @@ body,html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--secondary_color);
     transition: color 0.8s ease, background 0.8s ease;
 }
 .route__container{
@@ -29,4 +28,5 @@ body,html{
     height: 100vh;
     content: '';
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }

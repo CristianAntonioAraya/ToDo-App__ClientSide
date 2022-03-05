@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/navigation/Navbar';
 import { addNewTask } from '../redux/actions/TaskActions';
 
 const AddNew = () => {
@@ -35,6 +35,7 @@ const AddNew = () => {
         if(isValid()){
             dispatch(addNewTask( title, description ))
             navigate('/')
+            window.location.reload()
         }
     }
 
@@ -62,6 +63,7 @@ const AddNew = () => {
                     </div>
                     <div className='addnew__buttons'>
                         <button className='button__send' type='submit'>Add</button>
+                        <button className='button__cancel' onClick={ ()=> navigate('/')} type="button" >Cancel</button>
                         <button className='button__clear' type='reset' onClick={ handleClear }>Clean</button>
                     </div>
                 </form>

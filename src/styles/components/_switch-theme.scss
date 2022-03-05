@@ -1,17 +1,38 @@
 .switch__button{
-    position: absolute;
+    position: relative;
+    display: flex;
+    align-items: center;
     background-color: var(--secondary_color);
-    color: var(--primary_color);
-    top: 0;
+    border-radius: 100px;
+    border: 1px solid var(--secondary_color);
+}
+.switch__circle{
+    position: absolute;
+    height: 2.6rem;
+    width: 2.6rem;
+    border-radius: 100%;
+    background-color: var(--primary-accent_color);
+    transition: all 0.4s ease;
+}
+.moon{
+    color: var(--light_color);
+}
+.sun{
+    color: var(--yellow_color);
+}
+.switch__circle-light{
     right: 0;
-    border-radius: 10px;
-    border: none;
+}
+.switch__circle-dark{
+    right: 50%;
 }
 @media only screen and (max-width: 600px) {
     .switch__button{
         margin: 1rem;
-        padding: 0.2rem 0.8rem;
         font-size: 20px;
     }
+    .switch__icon{
+        font-size: 25px;
+        margin: 0.5rem 0.5rem;
+    }
 }
-

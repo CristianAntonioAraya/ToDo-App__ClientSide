@@ -11,21 +11,27 @@
     padding: 0.5rem;
 }
 .filter__btn-text{
+    display: flex;
+    align-items: center;
     margin-right: 10px;
+    color: var(--secondary_color);
 }
 .filter__link-content{
     display: flex;
 }
-
+.filter__link-icon{
+    color: var(--secondary_color);
+}
+.filter__link-filter{
+    font-size: 20px;
+    color: var(--light_color);
+}
 @media only screen and (max-width: 600px) {
     .filter__btn-icon{
         font-size: 15px;
     }
     .filter__btn-text{
         font-size: 25px;
-    }
-    .filter__icon-filters{
-        padding-right: 4px;
     }
     .filter__link-content{
         padding: 0.3rem;
@@ -35,6 +41,9 @@
         margin-right: 0.3rem;
     }
     .filter__link-icon{
+        font-size: 20px;
+    }
+    .filtet__link_filter{
         font-size: 20px;
     }
 }

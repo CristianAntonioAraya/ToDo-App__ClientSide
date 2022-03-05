@@ -23,15 +23,24 @@
     font-size: 40px;
 }
 .addnew__input{
+    color: var(--dark_color);
     font-size: 30px;
-    padding: 0 0.5rem;
-    border: 1px solid var(--secondary_color);
+    padding: 0.2rem 0.5rem;
+    border: 2px solid var(--secondary_color);
+    border-radius: 10px;
+    &:focus{
+        outline-color: var(--dark_color);
+    }
 }
 .addnew__textarea{
+    border-radius: 10px;
+    color: var(--dark_color);
     font-size: 30px;
-    padding: 0 0.5rem;
+    padding: 0.2rem 0.5rem;
     resize: none;
-    
+    &:focus{
+        outline-color: var(--dark_color);
+    }
 }
 .addnew__buttons{
     margin: 1rem 0;

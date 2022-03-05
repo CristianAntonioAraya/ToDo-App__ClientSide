@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { Logout } from "../redux/actions/AuthActions";
-import SwitchButton from "./SwitchButton"
+import { Logout } from "../../redux/actions/AuthActions";
+import SwitchButton from "../utils/SwitchButton"
 
 
 const Nav = () => {

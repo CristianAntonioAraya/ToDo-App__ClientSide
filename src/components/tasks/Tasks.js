@@ -1,6 +1,6 @@
 import SingleTask from "./SingleTask";
 import { useDispatch, useSelector } from 'react-redux';
-import { getAllTask } from "../redux/actions/TaskActions";
+import { getAllTask } from "../../redux/actions/TaskActions";
 import { useEffect } from "react";
 
 
@@ -10,7 +10,7 @@ const Tasks = () => {
 
     useEffect(() => {
         dispatch(getAllTask())    
-    }, []);
+    }, [dispatch]);
 
     const { tasks } = useSelector( state => state.task)
 

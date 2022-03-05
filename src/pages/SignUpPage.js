@@ -4,7 +4,7 @@ import { useDispatch  } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faKey, faUser} from '@fortawesome/free-solid-svg-icons';
 
-import SwitchButton from '../components/SwitchButton';
+import SwitchButton from '../components/utils/SwitchButton';
 import { StartRegister } from '../redux/actions/AuthActions';
 
 

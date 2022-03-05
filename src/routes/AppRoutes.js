@@ -6,7 +6,7 @@ import SettingPage from "../pages/SettingPage"
 const AppRoutes = () => {
 
     return (
-        <div className="route__container" id="routes">
+        <div className="route__container " id="routes">
             <Routes>
                 <Route path="/" element={ <HomePage/> }/>
                 <Route path="/settings" element={ <SettingPage/> }/>

@@ -6,7 +6,7 @@ import { faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
 
 
 import { StartLoginEmailPassword } from '../redux/actions/AuthActions';
-import SwitchButton from '../components/SwitchButton';
+import SwitchButton from '../components/utils/SwitchButton';
 
 const SignInPage = () => {
 

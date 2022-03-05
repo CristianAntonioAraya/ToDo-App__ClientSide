@@ -1,15 +1,16 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { Logout } from "../redux/actions/AuthActions";
+
+import { Logout } from "../../redux/actions/AuthActions";
+import SwitchButton from '../utils/SwitchButton';
 
 
 const NavMobile = () => {
 
     const dispatch = useDispatch();    
     const navigate = useNavigate()
-    // const { userName } = useSelector( state => state.auth )
 
     const toggleMenu = () => {
         const menu = document.getElementById('nav__mobile')
@@ -38,6 +39,8 @@ const NavMobile = () => {
                         <p className='nav-mobile__link' onClick={() => navigate('profile')}>settings</p>
 
                         <p className='nav-mobile__link' onClick={ handleLogout }>Logout</p>
+
+                        <SwitchButton/>
 
                     </div>
                 </div>
