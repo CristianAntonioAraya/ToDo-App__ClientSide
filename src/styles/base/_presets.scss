@@ -1,0 +1,49 @@
+
+
+// Background colors
+
+.bg_primary{
+    background-color: var(--primary_color);
+}
+.bg_secondary{
+    background-color: var(--secondary_color);
+}
+.bg_light{
+    background-color: var(--light_color);
+}
+.bg__dark{
+    background-color: var(--dark_color);
+}
+
+// Text color
+
+.text_primary{
+    color: var(--primary_color);
+}
+.text_secondary{
+    color: var(--secondary_color);
+}
+.text_light{
+    color: var(--light_color);
+}
+.text_dark{
+    color: var(--dark_color);
+}
+
+//borders
+
+.bd_round{
+    border-radius: 10px;
+}
+.bd_primary{
+    border-color: var(--primary_color);
+}
+.bd_secondary{
+    border-color: var(--secondary_color);
+}
+.bd_light{
+    border-color: var(--light_color);
+}
+.bd_secondary{
+    border-color: var(--light_color);
+}
