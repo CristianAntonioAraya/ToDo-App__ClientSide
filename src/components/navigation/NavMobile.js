@@ -20,7 +20,6 @@ const NavMobile = () => {
     }
 
     const handleLogout = () => {
-        console.log('clicked Logout');
         dispatch(Logout())
         localStorage.removeItem('token')
     }

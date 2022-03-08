@@ -46,16 +46,18 @@
 .auth__redirect{
     font-style: italic;
     text-decoration:underline;
+    color: var(--secondary_color);
+}
+.auth__text{
+    color: var(--secondary_color);
 }
 @media only screen and (max-width: 600px) {
-    .auth__container{
-        margin-top: 1rem;
-    }
+
     .auth__title{
         font-size: 100px;
     }
     .auth__field{
-        padding: 1rem 0;
+        padding: 0.5rem 0;
     }
     .auth__icon{
         font-size: 35px;

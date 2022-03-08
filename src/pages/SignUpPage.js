@@ -14,10 +14,10 @@ const SignUpPage = () => {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     
-    const [userName, setUserName] = useState('Cristian Araya');
-    const [email, setEmail] = useState('arayacristian1398@gmail.com');
-    const [password, setPassword] = useState('123456');
-    const [repeatPassword, setRepeatPassword] = useState('123456');
+    const [userName, setUserName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [repeatPassword, setRepeatPassword] = useState('');
 
 
     const handleRegister = (e) => {

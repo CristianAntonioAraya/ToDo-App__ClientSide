@@ -1,19 +1,24 @@
 import axios from "axios"
 import { types } from "../types/Types"
+import { setError } from "./UiAction"
 
 const URL = 'http://localhost:4000/users/'
 
 export const StartLoginEmailPassword = ( email, password ) => {
     return (dispatch ) => {
 
-
         const data = { email, password }
 
         axios.post(URL+'signin',data)
             .then( ({data}) => {
-                const {userName, id, token} = data;
-                dispatch(Login(id, userName))
-                localStorage.setItem('token',token) 
+                if(data.ok === true){
+                    const {userName, id, token} = data;
+                    dispatch(Login(id, userName))
+                    localStorage.setItem('token',token) 
+                }
+                else{
+                    dispatch(setError('User not found'))
+                }
             })
             .catch( error => {
                 console.log(error);
